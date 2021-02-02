@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script>
+            window.onload = function() {
+                var path = window.location.pathname;
+                if (path.endsWith('index.html')) {
+                    path = path.substr(path, path.length - 'index.html'.length);
+                }
+                var url = 'https://play.workadventu.re/_/global/'+window.location.host+path+'map.json';
+                document.getElementById('mapLink').href = url;
+                document.getElementById('mapLink').innerText = url;
+            };
+        </script>
+    </head>
+    <body>
+        Bonjour, bienvenu sur l'instance Lyon Game Dev pour <a href="https://workadventu.re">Workadventu.re</a>.
+        <br/>
+        Nous prévoyons d'utiliser pour la première fois ce dispositif ce 4 janvier 2021 via cette URL <a id="mapLink" href=""></a>
+		D'ici là vous pouvez utilisez le dispositif mais nous ne vous garantissons aucune stabilité.
+    </body>
+</html>
